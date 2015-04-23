@@ -1,0 +1,24 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.2.3.RELEASE")
+    }
+}
+
+apply plugin: 'spring-boot'
+apply plugin: 'idea'
+
+jar {
+    baseName = 'gs-messaging-jms'
+    version =  '0.1.0'
+}
+
+dependencies {
+    compile 'org.springframework.boot:spring-boot-starter'
+    compile 'org.springframework:spring-jms'
+    compile 'org.apache.activemq:activemq-broker'
+    testCompile 'com.jayway.restassured:spring-mock-mvc:2.4.1'
+    testCompile 'org.springframework:spring-test:4.1.6.RELEASE'
+}

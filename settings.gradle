@@ -1,0 +1,3 @@
+rootProject.name = 'spring-guides'
+include 'greeting-web-service', 'gs-messaging-jms'
+

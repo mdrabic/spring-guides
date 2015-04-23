@@ -1,0 +1,19 @@
+subprojects {
+    repositories {
+        mavenCentral()
+    }
+
+    apply plugin: 'java'
+
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+
+    jar {
+        manifest.attributes provider: 'gradle'
+    }
+
+    dependencies {
+        testCompile group: 'junit', name: 'junit', version: '4.12'
+        testCompile 'org.assertj:assertj-core:3.0.0'
+    }
+}
